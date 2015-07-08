@@ -20,4 +20,4 @@ var user = prompt("What is thy name, Sir?");//ask his or her name.
 
 
 //Outputs.
-
+console.log("Thy name is "+user+".");
