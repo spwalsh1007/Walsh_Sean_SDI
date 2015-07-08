@@ -5,4 +5,19 @@ Sean Walsh
  7/8/15.
  */
 
-alert ("Surprise! These files are linked.");
+//alert ("Surprise! These files are linked.");
+
+//Engage the user.
+
+//variables
+var user = prompt("What is thy name, Sir?");//ask his or her name.
+
+
+
+
+
+
+
+
+//Outputs.
+
