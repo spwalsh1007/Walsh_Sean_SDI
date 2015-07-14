@@ -10,12 +10,25 @@ alert("See, yes. Works this file does.");
 
 
 //variables
+var         customerName;
 
+
+
+
+//arrays
 
 
 
 
 //prompts
+customerName  = prompt("Welcome to Flips Ice Cream Truck. \n What's your name, friend?");
+
+
+
+
+//casting the numbers
+
+
 
 
 
@@ -28,3 +41,4 @@ alert("See, yes. Works this file does.");
 
 
 //outputs
+console.log("Welcome "+customerName+", to Flip's.");
