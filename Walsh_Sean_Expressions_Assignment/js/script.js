@@ -3,7 +3,7 @@
   SDI 1507 Section 01
   Expressions Assignment
   7/14/15
- */
+*/
 
 
 //alert("See, yes. Works this file does.");
@@ -15,11 +15,12 @@ var         chocolatePrice;
 var         vanillaPrice;
 var         strawberryPrice;
 var         scoopTotal;
-
-
+var         scoopSubTotal;
+var         tax;
+var         totalCost;
 
 //arrays
-var         flavors = ["chocolate", "vanilla", "strawberry"];
+var         flavors   = ["chocolate", "vanilla", "strawberry"];
 
 
 
@@ -29,6 +30,7 @@ alert                 ("Today we have chocolate, vanilla, and strawberry ice cre
 flavors[0]    = prompt("How many scoops of chocolate ice cream would you like?");
 flavors[1]    = prompt("How many scoops of vanilla ice cream would you like?");
 flavors[2]    = prompt("How many scoops of strawberry ice cream would you like?");
+
 
 //casting the strings to numbers.
 flavors[0]  = Number(flavors[0]);
@@ -43,7 +45,7 @@ chocolatePrice  = flavors[0] * 1.25;
 vanillaPrice    = flavors[1] * 1.25;
 strawberryPrice = flavors[2] * 1.25;
 scoopTotal      = flavors[0] + flavors[1] + flavors[2];
-
+scoopSubTotal   = chocolatePrice + vanillaPrice + strawberryPrice;
 
 
 
@@ -54,3 +56,12 @@ console.log("That's "+flavors[0]+" Scoops of chocolate ice cream for $"+chocolat
 console.log("That's "+flavors[1]+" Scoops of vanilla ice cream for $"+vanillaPrice+".");
 console.log("That's "+flavors[2]+" Scoops of strawberry ice cream for $"+strawberryPrice+".");
 console.log("That's "+scoopTotal+" scoops of ice cream");
+console.log("That's a sub total of "+scoopSubTotal+" for ice cream.");
+//calculating the total.
+tax           = scoopSubTotal *= .06;
+tax           = Math.round(tax * 100)/100;
+totalCost     = scoopSubTotal += tax;
+
+//outputting the total to the user.
+console.log("Your sub total is $"+scoopSubTotal+".");
+console.log("Plus 6% sales tax is $"+tax+".");
