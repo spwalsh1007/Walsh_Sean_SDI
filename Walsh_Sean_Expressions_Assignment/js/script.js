@@ -17,6 +17,7 @@ var         strawberryPrice;
 var         scoopTotal;
 var         scoopSubTotal;
 var         tax;
+var         taxCost;
 var         totalCost;
 
 //arrays
@@ -58,10 +59,12 @@ console.log("That's "+flavors[2]+" Scoops of strawberry ice cream for $"+strawbe
 console.log("That's "+scoopTotal+" scoops of ice cream");
 console.log("That's a sub total of "+scoopSubTotal+" for ice cream.");
 //calculating the total.
-tax           = scoopSubTotal *= .06;
-tax           = Math.round(tax * 100)/100;
-totalCost     = scoopSubTotal += tax;
+tax           = scoopSubTotal * .06;
+taxCost           = Math.round(tax * 100)/100;
+totalCost     = scoopSubTotal += taxCost;
 
 //outputting the total to the user.
-console.log("Your sub total is $"+scoopSubTotal+".");
-console.log("Plus 6% sales tax is $"+tax+".");
+console.log("Plus 6% sales tax is $"+taxCost+".");
+console.log("For a grand total of $"+totalCost+".");
+console.log("How would you like to pay?");
+console.log("Thank you for your payment and enjoy your ice cream, "+customerName+".");
